@@ -7,4 +7,4 @@ Les sources du projets sont accessibles
 
 Récupérer les pour avoir le projet maven commun afin d'avoir les mêmes sources
 
-@Jeremie : c'est l'intégration continue ^^
+@David pour moi c'est bon je pense que mon environement est près
