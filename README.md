@@ -3,6 +3,8 @@ Talkative
 
 Projet web I4 webservices
 
-Test GitHub Eclipse J�r�mie
+Les sources du projets sont accessibles
 
-Test David
+Récupérer les pour avoir le projet maven commun afin d'avoir les mêmes sources
+
+@Jeremie : c'est l'intégration continue ^^
