@@ -37,7 +37,7 @@ public class ArticleResourceTest {
 		String result = webClient.path("talkative/editors/me/articles/myarticle/www.epsi.fr/talkative+projet.html/comments").get(String.class);
 		
 		Assert.assertEquals(Status.NO_CONTENT.getStatusCode(), webClient.getResponse().getStatus());
-		Assert.assertEquals("http://www.epsi.fr/talkative projet.html; rel=\"article\"", webClient.getResponse().getMetadata().getFirst("Link")); 
+		Assert.assertEquals("http://www.epsi.fr/talkative+projet.html; rel=\"article\"", webClient.getResponse().getMetadata().getFirst("Link")); 
 		Assert.assertNull(result);
 		
 	}

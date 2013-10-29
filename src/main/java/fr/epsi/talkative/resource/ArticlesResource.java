@@ -12,6 +12,8 @@ import javax.ws.rs.core.Response;
  */
 @Path("editors/{editor}/articles")
 public class ArticlesResource {
+	
+	private @PathParam("editor") String editor;
 
 	@GET
 	@Path("{article:.*}/comments")
