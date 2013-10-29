@@ -15,6 +15,11 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+/**
+ * 
+ * @author David CROCHOT
+ *
+ */
 @RunWith(ApplicationComposer.class)
 @EnableServices("jax-rs")
 public class ArticleResourceTest {
@@ -29,9 +34,10 @@ public class ArticleResourceTest {
 	public void canGetNoCommentWhenNewArticle()
 	{
 		WebClient webClient = createWebClient();
-		String result = webClient.path("talkative/editors/me/articles/myarticle/comments").get(String.class);
+		String result = webClient.path("talkative/editors/me/articles/myarticle/www.epsi.fr/talkative+projet.html/comments").get(String.class);
 		
 		Assert.assertEquals(Status.NO_CONTENT.getStatusCode(), webClient.getResponse().getStatus());
+		Assert.assertEquals("http://www.epsi.fr/talkative projet.html; rel=\"article\"", webClient.getResponse().getMetadata().getFirst("Link")); 
 		Assert.assertNull(result);
 		
 	}
