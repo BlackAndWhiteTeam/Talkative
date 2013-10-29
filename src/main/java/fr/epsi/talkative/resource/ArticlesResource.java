@@ -10,11 +10,8 @@ import javax.ws.rs.core.Response;
  * @author David CROCHOT
  *
  */
-@Path("editors/{editor}/articles")
 public class ArticlesResource {
-	
-	private @PathParam("editor") String editor;
-
+		
 	@GET
 	@Path("{article:.*}/comments")
 	public Response getComments(@PathParam("editor")String editor,@PathParam("articles")String article){
