@@ -6,8 +6,6 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.Response.Status;
 
-import fr.epsi.talkative.repository.EditorRepository;
-
 @Path("editors")
 public class EditorsResource {
 
