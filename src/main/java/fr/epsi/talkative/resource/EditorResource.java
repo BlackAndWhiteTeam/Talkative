@@ -13,7 +13,7 @@ public class EditorResource {
 	}
 
 	@Path("articles")
-	public ArticlesResource(){
+	public void ArticlesResource(){
 		
 	}
 }

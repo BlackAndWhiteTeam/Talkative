@@ -14,7 +14,7 @@ public class EditorsResource {
 	@Path("{editor}/articles")
 	public  EditorResource getArticles(@PathParam("editor")String editor){
 		
-		return new EditorResource();
+		return new EditorResource(editor);
 	}
 
 }
