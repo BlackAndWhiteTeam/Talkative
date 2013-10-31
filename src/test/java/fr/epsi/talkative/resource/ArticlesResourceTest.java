@@ -36,10 +36,10 @@ public class ArticlesResourceTest {
         public void canRetrieveNoCommentForNewArticle() {
                 WebClient client = createWebClient();
 
-                String message = client.path("editors/davidg/articles/www.epsi.fr/i4/mon%20article.html/comments").get(String.class);
+                String message = client.path("editors/davidc/articles/www.epsi.fr/i4/monarticle.html/comments").get(String.class);
 
                 Assert.assertEquals(204, client.getResponse().getStatus());
-                Assert.assertEquals("http://www.epsi.fr/i4/mon%20article.html; rel=\"article\"", client.getResponse().getMetadata().getFirst("Link"));
+                Assert.assertEquals("http://www.epsi.fr/i4/monarticle.html; rel=\"article\"", client.getResponse().getMetadata().getFirst("Link"));
                 Assert.assertNull(message);
         }
 
